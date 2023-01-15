@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 300;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f1f1f1;
+        }
+
+        /*Header Area*/
+        .header {
+            background-color: #f3f3f3;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Menu Area */
+        .topnav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            overflow: hidden;
+            font-size: 0;
+        }
+
+        .topnav li {
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .topnav li a,
+        .dropbtn {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            padding: 14px 16px;
+        }
+
+        .topnav li a:hover,
+        .dropbtn:hover {
+            background-color: red;
+        }
+
+        li.dropdown .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            background-color: #f3f3f3;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            /* z-index: 1; */
+        }
+
+        .dropdown-content li {
+            display: block;
+        }
+
+        .dropdown-content li a {
+            display: block;
+            text-decoration: none;
+            padding: 12px 15px;
+            color: #111;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #ddd;
+        }
+
+        li.dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        li.dropdown:hover .dropbtn {
+            background-color: mediumseagreen;
+        }
+
+        /* Content Area */
+        .row {
+            display: flow-root;
+
+        }
+
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+            background-position: 0px 0px;
+        }
+
+        div.fakeimg.rc-one:nth-child(2) {
+            background: url("img/bg-1.jpg") no-repeat;
+            background-size: cover;
+
+        }
+
+        div.fakeimg.rc-two:nth-child(2) {
+            background: url("img/bg-2.jpg") no-repeat;
+            background-size: cover;
+
+        }
+
+        div.fakeimg.rc-three:nth-child(3) {
+            background: url("img/bg-3.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        div.fakeimg.rc-four:nth-child(4) {
+            background: url("img/bg-4.jpg") no-repeat;
+            background-size: cover;
+
+        }
+
+        div.fakeimg.lc-one:nth-child(3) {
+            background: url("img/view.jpg") no-repeat;
+            background-size: cover;
+
+        }
+
+        div.fakeimg.lc-two:nth-child(3) {
+            background: url("img/sky.jpg") no-repeat;
+            background-size: cover;
+
+        }
+
+        .card {
+            background-color: #fff;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        h2,
+        h3 {
+            font-weight: 700;
+            padding-bottom: 10px;
+        }
+
+        p {
+            padding: 10px 10px 10px 0px;
+
+        }
+
+        /* Footer Area */
+        div.footer {
+            clear: both;
+            padding: 20px;
+            background-color: #333;
+            text-align: center;
+            color: #fff;
+        }
+
+
+        /* Media Queries Area */
+
+
+        @media (max-width: 480px) {
+            .topnav li {
+                display: block;
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+    <div class="topnav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Portfolio</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Link 5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>Title Heading</h2>
+                <p style="font-family: monospace;">Title description, dec 03 , 2022</p>
+                <div class="fakeimg lc-one" style="height: 200px;">Image</div>
+                <p>Some text...</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto non quidem ex reprehenderit sint
+                    expedita
+                    ipsa qui sunt quae! Ratione quidem laborum nihil voluptatum dolorum provident, doloribus pariatur
+                    impedit nostrum?</p>
+            </div>
+            <div class="card">
+                <h2>Title Heading</h2>
+                <p style="font-family: monospace;">Title description, dec 03 , 2022</p>
+                <div class="fakeimg lc-two" style="height: 200px;">Image</div>
+                <p>Some text...</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto non quidem ex reprehenderit sint
+                    expedita
+                    ipsa qui sunt quae! Ratione quidem laborum nihil voluptatum dolorum provident, doloribus pariatur
+                    impedit nostrum?</p>
+            </div>
+        </div>
+        <!--Leftcolumn End-->
+
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="fakeimg rc-one" style="height: 100px;">Image</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dolore cumque nulla suscipit officia
+                    ex
+                    sint enim commodi! Eum, ratione suscipit repudiandae eos provident commodi. Iure atque animi saepe
+                    nihil?</p>
+            </div>
+            <div class="card">
+                <h3>Popular Post</h3>
+                <div class="fakeimg rc-two">
+                    <p>Image</p>
+                </div>
+                <div class="fakeimg rc-three">
+                    <p>Image</p>
+                </div>
+                <div class="fakeimg rc-four">
+                    <p>Image</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Follow Me</h3>
+                <p>Some Text...</p>
+            </div>
+        </div>
+        <!--Rightcolumn End-->
+
+    </div>
+
+    <div class="footer">
+        Footer
+    </div>
+
+</body>
+
+</html>
