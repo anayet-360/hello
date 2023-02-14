@@ -9,4 +9,5 @@ img/
 *.md
 *.txt
 video/
-css/
+*.css
+!default.css
