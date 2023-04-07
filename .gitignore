@@ -1,0 +1,13 @@
+*.html
+!index.html
+.vscode/
+audio/
+custom-font/
+favicon/
+fonts/
+img/
+*.md
+*.txt
+video/
+*.css
+!default.css
